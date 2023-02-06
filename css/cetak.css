@@ -1,0 +1,63 @@
+@import url('https://fonts.cdnfonts.com/css/bookman-old-style');
+
+.headers {
+    text-align: center;
+}
+.headers h1{
+    font-family: "Bookman Old Style";
+    text-align: center;
+    font-size: 18px;
+}
+
+.headers .logo {
+    width: 0.71in;
+    overflow: hidden;
+    margin: 0px auto;
+    padding: 0px 0px 10px 0px;
+    position: static;
+    text-align: center;
+
+}
+.headers .text {
+    display: block;
+    overflow: show;
+}
+.headers hr {
+    margin: 0 auto;
+    width: 400px;
+    height: 0px;
+    border: 1px solid #000;
+}
+.headers .logo img {
+    width: 100%;
+}
+.suratketerangan .judul {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.suratketerangan .judul h2{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: #254061;
+}
+.suratketerangan .judul p{
+    text-align: center;
+    display: inline;
+    border-top: 1px solid #000;
+
+}
+
+.footers {
+    font-size: 10px;
+}
+@media print {
+    .kaki {
+        position: fixed;
+        bottom: 0px;
+    }
+}
