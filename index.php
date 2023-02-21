@@ -1,21 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="..\css\cetak.css" class="css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-</head>
-<body>
-    <div class="container">
-        <?php include 'conn.php' ?>
+<?php
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $jenisS = $_POST['jenisSurat'];
+    if ($jenisS == 'Surat Keterangan') {
+        $link = 'suratKeterangan/';
+    } else if ($jenisS == 'Surat Pindah') {
+        $link = 'suratPindah/';
+    } else {
+        $link = $_SERVER['PHP_SELF'];
+    }
+    header('Location: ' . $link);
+    exit;
+}
+include 'headutama.php';
+?>
+<div class="container-fluid">
+    <div class="row justify-content-center align-items-center text-center shadow-sm">
+        <div class="col">&nbsp;</div>
     </div>
+</div>
+<div class="container-fluid">
+    <div class="row justify-content-center align-items-center z-1">
+        <div class="col-2 shadow-sm" style="min-height: 500px;">&nbsp;</div>
+        <div class="col">
 
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-</body>
+            <!-- data input -->
+            <div class="row">
+                <div class="col">
+                    <form method="post">
+                        <div class="input-group mb-3">
+                            <label class="input-group-text" for="JenisSurat">Surat</label>
+                            <select class="form-select" id="jenisSurat" name="jenisSurat">
+                                <option value=""> --> Pilih Surat <-- </option>
+                                <option value="Surat Keterangan">Keterangan</option>
+                                <option value="Surat Pindah">Pindah</option>
+                            </select>
+                            <button class="btn btn-success" type="submit"><i class="fa-solid fa-file"></i> Buat Surat</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
 
-</html>
+
+        </div>
+        <div class="col-3">&nbsp;</div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row justify-content-center align-items-center text-center shadow" style="min-height: 100px;">
+        <div class="col">&nbsp;</div>
+    </div>
+</div>
+<?php include 'footutama.php';
