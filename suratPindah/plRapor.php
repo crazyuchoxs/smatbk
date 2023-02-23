@@ -24,7 +24,7 @@
                         <td><?= dateIN(Date("d m Y")); ?></td>
                         <td></td>
                         <td></td>
-                        <td>
+                        <td>Sungai Raya,
                             <?= dateIN(Date("d m Y")); ?><br><?= $kasek['Jabatan']?>,<br><br><br>
                             <u><?= $kasek['Nama']?></u> <br>
                             NIP.<br>

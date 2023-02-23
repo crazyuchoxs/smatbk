@@ -50,6 +50,8 @@ if ($result2->num_rows > 0) :
 
 		<form action="surat.php" method="post">
 			<div class="input-group mb-3">
+				<span class="input-group-text text-danger border-danger" id="basic-addon1">No Surat</span>
+				<input type="text" name="noSurat" style="width: 50px !important;border:var(--bs-border-width) solid var(--bs-border-color)" class="ps-2 text-danger border-danger" placeholder="No." >
 				<span class="input-group-text " id="basic-addon1">Nama</span>
 				<input type="text" name="nma" class="form-control" value='<?= $nm ?>' aria-describedby="basic-addon1" readonly>
 			</div>
@@ -83,11 +85,13 @@ if ($result2->num_rows > 0) :
 			<div class="input-group mb-3">
 				<span class="input-group-text text-danger border-danger" id="basic-addon1">Tujuan Sekolah</span>
 				<input type="text" name="tujuansekolah" class="form-control text-danger border-danger" Placeholder="Tujuan Sekolah..." aria-describedby="basic-addon1" enabled>
-			</div>
-
-			<div class="input-group mb-3">
-				<span class="input-group-text text-danger border-danger" id="basic-addon1">Keterangan</span>
+				<span class="input-group-text text-danger border-danger" id="basic-addon1">Tanggal</span>
 				<input type="text" name="tglPermintaan" class="form-control text-danger border-danger" Placeholder='<?= dateIN(date("d m Y")) ?>' aria-describedby="basic-addon1" enabled>
+			</div>
+			
+			<div class="input-group mb-3">
+				<span class="input-group-text text-danger border-danger" id="basic-addon1">Alasan Pindah</span>
+				<input type="text" name="alasanpindah" class="form-control text-danger border-danger" Placeholder="Alasan Pindah..." aria-describedby="basic-addon1" enabled>
 			</div>
 
 

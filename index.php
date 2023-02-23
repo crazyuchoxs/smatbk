@@ -27,7 +27,7 @@ include 'headutama.php';
             <div class="row">
                 <div class="col">
                     <form method="post">
-                        <div class="input-group mb-3">
+                        <div class="input-group mb-3 ">
                             <label class="input-group-text" for="JenisSurat">Surat</label>
                             <select class="form-select" id="jenisSurat" name="jenisSurat">
                                 <option value=""> --> Pilih Surat <-- </option>
