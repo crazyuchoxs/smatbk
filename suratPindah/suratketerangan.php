@@ -60,10 +60,15 @@
         <p>Demikian Surat Keterangan ini dibuat, agar menjadikan periksa bagi yang berkepentingan.</p>
         <div class="row justify-content-end">
             <div class="col-5">
+                <?php
+                include '../conn.php';
+                include '../conKasek.php';
+                
+                ?>
                 <br><br>
                 Sungai Raya, <?php echo dateIN(date("d m Y")) ?><br>
-                Kepla Sekloah<br><br><br><br>
-                Anton Wijaya, SH.
+                <?= $kasek['Jabatan'] ?><br><br><br><br>
+                <?= $kasek['Nama'] ?>
             </div>
         </div>
         <div class="row justify-content-start">

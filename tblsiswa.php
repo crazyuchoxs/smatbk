@@ -14,7 +14,7 @@ if (substr($KelasSiswa, 0, 3) == "XII") {
 } else {
     $kelasPD = "X (sepuluh) " . substr($KelasSiswa, 2, 1);
 }
-$wali = mysqli_query($conn,"SELECT * FROM tblwalikelas WHERE `Kelas` = '$KelasSiswa'");
+$wali = mysqli_query($conn, "SELECT * FROM tblwalikelas WHERE `Kelas` = '$KelasSiswa'");
 $wali = mysqli_fetch_assoc($wali);
 ?>
 
@@ -52,7 +52,12 @@ $resultkelas = mysqli_query($conn, $sqlkelas);
 if (mysqli_num_rows($resultkelas) > 0) :
     $x = 1;
     $y = 0;
-    $z = 0; ?>
+    $z = 0; 
+
+    include '../conn.php';
+    include '../conKasek.php';
+    include '../conPngws.php';
+?>
     <div class="table-responsive">
         <table class="table table-bordered lh-sm">
             <thead class="table-secondary">
@@ -71,14 +76,18 @@ if (mysqli_num_rows($resultkelas) > 0) :
             </thead>
             <tbody>
 
-                <?php 
+                <?php
                 while ($rowa = mysqli_fetch_assoc($resultkelas)) :
+                    if (empty($rowa['Nama Ayah'])) {
+                        $namaOrtu = $rowa['Nama Ibu'];
+                    } else {
+                        $namaOrtu = $rowa['Nama Ayah'];
+                    }
                     if (ucwords(strtolower($rowa['Nama'])) == $namaSiswa) : ?>
                         <tr class="table-active">
                         <?php else : ?>
                         <tr>
                         <?php endif; ?>
-
                         <td><?= $x ?></td>
                         <td><?= ucwords($rowa['NIPD']) ?></td>
                         <td><?= ucwords($rowa['NISN']) ?></td>
@@ -87,7 +96,7 @@ if (mysqli_num_rows($resultkelas) > 0) :
                         <td><?= ucwords(strtolower($rowa['Agama'])) ?></td>
                         <td><?= ucwords(strtolower($rowa['Tempat Lahir'])) ?></td>
                         <td><?= ucwords($rowa['Tanggal Lahir']) ?></td>
-                        <td><?= ucwords(strtolower($rowa['Nama Ayah'])) ?></td>
+                        <td><?= ucwords(strtolower($namaOrtu)) ?></td>
                         <td><?= ucwords(strtolower($rowa['Alamat'])) ?></td>
                         </tr>
                     <?php $x = $x + 1;
@@ -109,13 +118,12 @@ if (mysqli_num_rows($resultkelas) > 0) :
             </div>
         </div>
         <div class="col">
-            Mengetahui,<br>Pengawas Sekolah <br><br><br><br><br><span class="fw-bold text-decoration-underline">Drs. Rukadi</span>
+            Mengetahui,<br><?= $pngws['Jabatan']?><br><br><br><br><br><span class="fw-bold text-decoration-underline"><?= $pngws['Nama']?></span>
         </div>
         <div class="col">
-            Sungai Raya, <?= dateIN(date("d m Y")) ?> <br><br><br><br><br><br><span class="fw-bold text-decoration-underline">Anton Wijaya, S.H.</span>
+            Sungai Raya, <?= dateIN(date("d m Y")) ?> <br><br><br><br><br><br><span class="fw-bold text-decoration-underline"><?= $kasek['Nama'] ?></span>
         </div>
     </div>
 <?php endif;
-
 $conn->close();
 ?>

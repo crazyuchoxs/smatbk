@@ -33,7 +33,7 @@
         <div class="row justify-content-center">
             <div class="col-1"></div>
             <div class="col-4">Tempat & Tgl. Lahir</div>
-            <div class="col-7">: <?php echo $_POST['ttl']; ?></div>
+            <div class="col-7">: <?= $_POST['ttl']; ?></div>
         </div>
         </p>
         <p>Ketarangan :</p>
@@ -41,20 +41,22 @@
         include '../cetak/roman.php';
         include '../cetak/tglIndo.php';
         include '../cetak/romawi.php';
+        include '../conn.php';
+        include '../conKasek.php';
         ?>
         <p>
         <ol>
-            <li>Nama tersebut diatas adalah benar siswa SMA Taruna Bumi Khatulistiwa Angkatan <?php echo $angkatan ?> Tahun Pelajaran <?php echo $tahun ?>.</li>
-            <li><?php echo $_POST['keterangan']; ?></li>
+            <li>Nama tersebut diatas adalah benar siswa SMA Taruna Bumi Khatulistiwa Angkatan <?= $angkatan ?> Tahun Pelajaran <?= $tahun ?>.</li>
+            <li><?= $_POST['keterangan']; ?></li>
         </ol>
         </p>
         <p>Demikian Surat Keterangan ini dibuat, agar menjadikan periksa bagi yang berkepentingan.</p>
         <div class="row justify-content-end">
             <div class="col-5">
                 <br><br>
-                Sungai Raya, <?php echo dateIN(date("d m Y")) ?><br>
-                Kepla Sekloah<br><br><br><br>
-                Anton Wijaya, SH.
+                Sungai Raya, <?= dateIN(date("d m Y")) ?><br>
+                <?= $kasek['Jabatan']?><br><br><br><br>
+                <?= $kasek['Nama']?>
             </div>
         </div>
 
