@@ -1,6 +1,7 @@
 <?php include '../headutama.php' ?>
 <link rel="stylesheet" href="printPotrait.css">
 <?php include '../err.php' ?>
+<?php include '../err2.php' ?>
 <div class="a4 bg-white" style="margin: auto;">
     <?php include '../cetak/header.php' ?>
     

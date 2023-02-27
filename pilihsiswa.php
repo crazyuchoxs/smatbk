@@ -1,4 +1,5 @@
-<?php include '../headutama.php'; ?>
+<?php include '../headutama.php';
+?>
 <div class="container text-center">
     <div class="row m-4 shadow align-items-center rounded-2 overflow-hidden" style="min-height:550px;">
         <div class="col bg-warning d-none d-sm-block" style="min-height:550px;">

@@ -1,5 +1,6 @@
 <?php include '../headutama.php'; ?>
 <?php include '../err.php' ?>
+<?php include '../err3.php' ?>
 <div class="a4 bg-white justify-content-center" style="margin: auto;">
     <?php include '../cetak/header.php' ?>
     <?php include 'suratketerangan.php' ?>
