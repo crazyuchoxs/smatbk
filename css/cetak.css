@@ -5,25 +5,31 @@
     height: 297mm;
     margin: 0px;
 }
+
 .a4-landscape {
     height: 210mm;
     width: 297mm;
     margin: 0px;
 }
+
 .a4-landscape table {
     font-size: 9px !important;
     padding: 0px !important;
     font-weight: 500 !important;
 }
+
 .a4-landscape table tr {
     padding: 0px !important;
 }
+
 .a4-landscape table tr th {
     padding: 0px 0px 0px 5px !important;
 }
+
 .a4-landscape table tr td {
     padding: 0px 0px 0px 5px !important;
 }
+
 .headers {
     text-align: center;
 }
@@ -91,21 +97,26 @@
 .footers {
     font-size: 10px;
 }
+
 .logoTable {
     width: 0.5in;
     overflow: hidden;
 }
+
 .dns8355 {
     font-size: 12px !important;
     font-weight: 700;
 }
+
 .kurikulum {
     font-size: 12px;
 }
+
 .efek-kaca {
-    box-shadow: 2px 2px 10px rgba(0,0,0,.15);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, .15);
     backdrop-filter: blur(1px);
 }
+
 .tutup {
     position: fixed;
     width: 100%;
@@ -116,21 +127,23 @@
     display: flex;
     align-items: center !important;
 }
+
 .tutup>div {
     margin: auto;
     display: block;
     animation: popup .1s ease-in forwards;
     animation-delay: .02s;
-    transform:scale(0);
+    transform: scale(0);
 }
 
 
 @keyframes popup {
-    0%{
-        transform:scale(0);
+    0% {
+        transform: scale(0);
     }
-    100%{
-        transform:scale(1);
+
+    100% {
+        transform: scale(1);
     }
 }
 
@@ -146,6 +159,7 @@
         visibility: visible !important;
         padding: .3cm 2cm .3cm 2cm !important;
     }
+
     .a4-landscape {
         visibility: visible !important;
         padding: .3cm 1cm .3cm 1cm;

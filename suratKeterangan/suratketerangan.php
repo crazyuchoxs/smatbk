@@ -55,9 +55,9 @@
             <div class="col-5">
                 <br><br>
                 Sungai Raya, <?= dateIN(date("d m Y")) ?><br>
-                <?= $kasek['Jabatan']?><br><br><br><br>
-                <?= $kasek['Nama']?>
+                <?= $kasek['Jabatan'] ?><br><br><br><br>
+                <?= $kasek['Nama'] ?>
             </div>
         </div>
 
-    </div> 
+    </div>

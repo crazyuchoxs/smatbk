@@ -1,7 +1,9 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-4">
-            <div class="d-flex justify-content-center"><div class="logoTable"><img class="img-fluid"src="..\img\logo.png" alt="" srcset=""> </div></div>
+            <div class="d-flex justify-content-center">
+                <div class="logoTable"><img class="img-fluid" src="..\img\logo.png" alt="" srcset=""> </div>
+            </div>
             <div class="d-flex justify-content-center"><span class="fw-bold">SMA TARUNA BUMI KHATULISTIWA</span></div>
         </div>
         <div class="col-3"></div>
@@ -28,5 +30,5 @@
             </div>
         </div>
     </div>
-    
+
 </div>

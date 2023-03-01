@@ -52,7 +52,7 @@ $resultkelas = mysqli_query($conn, $sqlkelas);
 if (mysqli_num_rows($resultkelas) > 0) :
     $x = 1;
     $y = 0;
-    $z = 0; 
+    $z = 0;
 
     include '../conn.php';
     include '../conKasek.php';
@@ -118,7 +118,7 @@ if (mysqli_num_rows($resultkelas) > 0) :
             </div>
         </div>
         <div class="col">
-            Mengetahui,<br><?= $pngws['Jabatan']?><br><br><br><br><br><span class="fw-bold text-decoration-underline"><?= $pngws['Nama']?></span>
+            Mengetahui,<br><?= $pngws['Jabatan'] ?><br><br><br><br><br><span class="fw-bold text-decoration-underline"><?= $pngws['Nama'] ?></span>
         </div>
         <div class="col">
             Sungai Raya, <?= dateIN(date("d m Y")) ?> <br><br><br><br><br><br><span class="fw-bold text-decoration-underline"><?= $kasek['Nama'] ?></span>

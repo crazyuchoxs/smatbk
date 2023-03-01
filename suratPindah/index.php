@@ -1,1 +1,1 @@
-<?php include '../pilihsiswa.php'; ?>
+<?php include '../pilihsiswa.php';

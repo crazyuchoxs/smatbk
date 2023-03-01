@@ -1,8 +1,8 @@
 <?php include '../headutama.php'; ?>
 <link rel="stylesheet" href="../css/printPotrait.css">
 <?php include '../cetak/tglIndo.php' ?>
-<?php include '../conn.php';?>
-<?php include '../conKasek.php';?>
+<?php include '../conn.php'; ?>
+<?php include '../conKasek.php'; ?>
 <div class="a4 bg-white container-fluid" style="margin: auto">
     <h5 class="text-center mb-5">KETERANGAN PINDAH SEKOLAH</h3>
         <span>Nama Peserta Didik : <?= $_POST['nama'] ?></span>
@@ -25,8 +25,8 @@
                         <td></td>
                         <td></td>
                         <td>Sungai Raya,
-                            <?= dateIN(Date("d m Y")); ?><br><?= $kasek['Jabatan']?>,<br><br><br>
-                            <u><?= $kasek['Nama']?></u> <br>
+                            <?= dateIN(Date("d m Y")); ?><br><?= $kasek['Jabatan'] ?>,<br><br><br>
+                            <u><?= $kasek['Nama'] ?></u> <br>
                             NIP.<br>
                             Orang Tua Wali<br><br><br>
                             <u>......................................................</u>

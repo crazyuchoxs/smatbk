@@ -53,7 +53,7 @@
         <ol>
             <li>Nama tersebut diatas adalah benar siswa SMA Taruna Bumi Khatulistiwa Angkatan <?= $angkatan ?> Tahun Pelajaran <?= $tahun ?>.</li>
             <li>Siswa tersebut telah mengikuti kegiatan belajar mengajar berbasis Kurikulum Merdeka</li>
-            <li>Yang bersangkutan mengajukan pindah sekolah ke <?= $_POST['tujuansekolah'] ?> berdasarkan <?= $_POST['alasanpindah']?> pada tanggal <?= $_POST['tglPermintaan'] ?></li>
+            <li>Yang bersangkutan mengajukan pindah sekolah ke <?= $_POST['tujuansekolah'] ?> berdasarkan <?= $_POST['alasanpindah'] ?> pada tanggal <?= $_POST['tglPermintaan'] ?></li>
             <li>Selama dalam pengasuhan dan pembinaan kami, siswa tersebut berkelakuan baik.</li>
         </ol>
         </p>
@@ -63,7 +63,7 @@
                 <?php
                 include '../conn.php';
                 include '../conKasek.php';
-                
+
                 ?>
                 <br><br>
                 Sungai Raya, <?= dateIN(date("d m Y")) ?><br>
