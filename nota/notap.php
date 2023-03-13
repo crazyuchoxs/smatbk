@@ -18,20 +18,20 @@
                 <?php include('../conn.php');
                 $totalAkhir = 0;
                 $rslt = mysqli_query($conn, $sqlNota);
-                if(mysqli_num_rows($rslt)>0):
-                while($rws = mysqli_fetch_assoc($rslt)) : 
-                $total = $rws['Qty'] * $rws['Harga'] ?>
-                <tr >                 
-                    <th class='ps-1 border-start border-end border-dark'><?= $rws['No'] ?></th>
-                    <td class='ps-1 border-start border-end border-dark'><?= $rws['Nama Barang'] ?></th>
-                    <td class='ps-1 border-start border-end border-dark'><?= $rws['Qty'] ?></th>
-                    <td class='ps-1 border-start border-end border-dark'><?= $rws['Satuan'] ?></th>
-                    <td class='ps-1 border-start border-end border-dark'><?= "Rp. " . number_format($rws['Harga'], 0, ',', '.') . ",00";?></th>
-                    <td class='ps-1 border-start border-end border-dark'><?= "Rp. " . number_format($total, 0, ',', '.') . ",00"; ?></th>                  
-                </tr>
-                <?php 
-                $totalAkhir = $totalAkhir + $total;
-                endwhile; 
+                if (mysqli_num_rows($rslt) > 0) :
+                    while ($rws = mysqli_fetch_assoc($rslt)) :
+                        $total = $rws['Qty'] * $rws['Harga'] ?>
+                        <tr>
+                            <th class='ps-1 border-start border-end border-dark'><?= $rws['No'] ?></th>
+                            <td class='ps-1 border-start border-end border-dark'><?= $rws['Nama Barang'] ?></th>
+                            <td class='ps-1 border-start border-end border-dark'><?= $rws['Qty'] ?></th>
+                            <td class='ps-1 border-start border-end border-dark'><?= $rws['Satuan'] ?></th>
+                            <td class='ps-1 border-start border-end border-dark'><?= "Rp. " . number_format($rws['Harga'], 0, ',', '.') . ",00"; ?></th>
+                            <td class='ps-1 border-start border-end border-dark'><?= "Rp. " . number_format($total, 0, ',', '.') . ",00"; ?></th>
+                        </tr>
+                <?php
+                        $totalAkhir = $totalAkhir + $total;
+                    endwhile;
                 endif;
                 ?>
             </tbody>
