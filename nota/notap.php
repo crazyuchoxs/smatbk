@@ -38,7 +38,7 @@
             <tfoot>
                 <tr>
                     <th colspan="5" class="border border-1 border-dark">Total</th>
-                    <td class="border border-1 border-dark"><?= "Rp. " . number_format($totalAkhir, 0, ',', '.'); ?></td>
+                    <td class="border border-1 border-dark"><?= "Rp. " . number_format($totalAkhir, 0, ',', '.') . ",00"; ?></td>
                 </tr>
             </tfoot>
 
