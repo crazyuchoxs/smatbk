@@ -17,12 +17,14 @@
             <tbody class="border-bottom border-1 border-dark">
                 <?php include('../conn.php');
                 $totalAkhir = 0;
+                $sqlNota = "SELECT * FROM tblNota WHERE `Pembeli`='A'";
                 $rslt = mysqli_query($conn, $sqlNota);
+                $i = 1;
                 if (mysqli_num_rows($rslt) > 0) :
                     while ($rws = mysqli_fetch_assoc($rslt)) :
                         $total = $rws['Qty'] * $rws['Harga'] ?>
                         <tr>
-                            <th class='ps-1 border-start border-end border-dark'><?= $rws['No'] ?></th>
+                            <th class='ps-1 border-start border-end border-dark'><?= $i ?></th>
                             <td class='ps-1 border-start border-end border-dark'><?= $rws['Nama Barang'] ?></th>
                             <td class='ps-1 border-start border-end border-dark'><?= $rws['Qty'] ?></th>
                             <td class='ps-1 border-start border-end border-dark'><?= $rws['Satuan'] ?></th>
@@ -30,6 +32,7 @@
                             <td class='ps-1 border-start border-end border-dark'><?= "Rp. " . number_format($total, 0, ',', '.') . ",00"; ?></th>
                         </tr>
                 <?php
+                        $i++;
                         $totalAkhir = $totalAkhir + $total;
                     endwhile;
                 endif;
@@ -45,7 +48,9 @@
         </table>
     </div>
     <div class="kaki">
-        <?php include '../cetak/footer.php' ?>
+        <?php include '../cetak/footer.php';
+        mysqli_close($conn);
+        ?>
     </div>
 </div>
 <?php include '../footutama.php'; ?>
