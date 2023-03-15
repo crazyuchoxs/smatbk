@@ -1,25 +1,26 @@
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (empty($_POST['nama']) || empty($_POST['email']) || empty($_POST['pesan'])) {
-        // Jika ada data yang belum diisi, tampilkan pesan error dan tetap di halaman ini
-        echo "Mohon lengkapi semua field!";
-    } else {
-        // Jika semua data sudah diisi, lanjutkan ke halaman berikutnya
-        header("Location: halaman-berikutnya.php");
-        exit();
-    }
-}
-?>
+<?php include 'headutama.php' ?>
+<div class="container-fluid bg-light m-0 p-0" style="height: 100vh;">
+    <div class="row row-cols-12 m-0 p-0">
+        <div class="col-2 m-0 pt-2 d-flex flex-column bg-white shadow" style="height: 100vh;">
+            <a href="#" class="img ms-auto me-auto rounded-circle overflow-hidden border border-2 border-dark-subtle"><img src="#" alt="" width="130px" height="130px"></a>
+            <hr>
+            <ul class="nav nav-pills flex-column fw-bold">
+                <li class="nav-item">
+                    <a href="#cs01" class="ps-5 nav-link" data-bs-toggle="collapse" aria-expanded="false" aria-controls="cs01">SURAT</a>
+                    <ul class="nav flex-column collapse flex-shrink-0" id="cs01">
+                        <li class="nav-item"><a href="#Keterangan" class="nav-link ps-5">Surat Keterangan</a></li>
+                        <li class="nav-item"><a href="#Pindah" class="nav-link ps-5">Surat Pindah</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="ps-5 nav-link">Nota</a>
+                </li>
+            </ul>
+            <span class="ps-5 pt-2 pb-2 pe-2 mt-auto">&copy; 2022</span>
+        </div>
+        <div class="col-10">
 
-<form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
-    <label for="nama">Nama:</label>
-    <input type="text" id="nama" name="nama"><br>
-
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email"><br>
-
-    <label for="pesan">Pesan:</label>
-    <textarea id="pesan" name="pesan"></textarea><br>
-
-    <input type="submit" value="Kirim">
-</form>
+        </div>
+    </div>
+</div>
+<?php include 'footutama.php' ?>
