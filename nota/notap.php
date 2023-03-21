@@ -1,51 +1,82 @@
 <?php include '../headutama.php'; ?>
 <div class="a4 bg-white justify-content-center" style="margin: auto;">
     <?php include '../cetak/header.php' ?>
-    <div class="container P-2">
-        <span>Tanggal : 11 Maret 2023</span>
+    <div class="container-fluid P-2">
+        <div class="row row-cols-6">
+            <div class="col">Kepada </div>
+            <div class="col-4">: Yth. Pimpinan Yayasan Adijanto</div>
+        </div>
+        <div class="row row-cols-6">
+            <div class="col">Perihal </div>
+            <div class="col-4">: Permohonan</div>
+        </div>
         <table class="table table-borderless p-2">
             <thead>
                 <tr>
                     <th class='p-1 border border-2 border-dark'>No</th>
-                    <th class='p-1 border border-2 border-dark'>Nama Barang</th>
-                    <th class='p-1 border border-2 border-dark'>Qty</th>
-                    <th class='p-1 border border-2 border-dark'>Satuan</th>
-                    <th class='p-1 border border-2 border-dark'>Harga Satuan</th>
-                    <th class='p-1 border border-2 border-dark'>Total Harga</th>
+                    <th class='p-1 border border-2 border-dark'>NAMA / JENIS BARANG / JASA </th>
+                    <th class='p-1 border border-2 border-dark'>JUMLAH</th>
+                    <th class='p-1 border border-2 border-dark'>KETERANGAN</th>
                 </tr>
             </thead>
-            <tbody class="border-bottom border-1 border-dark">
+            <tbody class="border-bottom border-1 border-dark ">
                 <?php include('../conn.php');
                 $totalAkhir = 0;
-                $sqlNota = "SELECT * FROM tblNota WHERE `Pembeli`='A'";
+                $sqlNota = "SELECT * FROM tblNota";
                 $rslt = mysqli_query($conn, $sqlNota);
                 $i = 1;
                 if (mysqli_num_rows($rslt) > 0) :
                     while ($rws = mysqli_fetch_assoc($rslt)) :
-                        $total = $rws['Qty'] * $rws['Harga'] ?>
+                         ?>
                         <tr>
-                            <th class='ps-1 border-start border-end border-dark'><?= $i ?></th>
+                            <th class='ps-1 border-start border-end border-dark'><?= $i++ ?></th>
                             <td class='ps-1 border-start border-end border-dark'><?= $rws['Nama Barang'] ?></th>
                             <td class='ps-1 border-start border-end border-dark'><?= $rws['Qty'] ?></th>
-                            <td class='ps-1 border-start border-end border-dark'><?= $rws['Satuan'] ?></th>
-                            <td class='ps-1 border-start border-end border-dark'><?= "Rp. " . number_format($rws['Harga'], 0, ',', '.') . ",00"; ?></th>
-                            <td class='ps-1 border-start border-end border-dark'><?= "Rp. " . number_format($total, 0, ',', '.') . ",00"; ?></th>
+                            <td class='ps-1 border-start border-end border-dark'><?= $rws['Keterangan'] ?></th>
                         </tr>
                 <?php
-                        $i++;
-                        $totalAkhir = $totalAkhir + $total;
                     endwhile;
                 endif;
+
+                while ($i<15): 
+                ?>
+                    <tr>
+                        <td class='ps-1 border-start border-end border-dark'></td>
+                        <td class='ps-1 border-start border-end border-dark'></td>
+                        <td class='ps-1 border-start border-end border-dark'></td>
+                        <td class='ps-1 border-start border-end border-dark'></td>
+                    </tr>
+                <?php 
+                $i++; 
+                endwhile; 
                 ?>
             </tbody>
             <tfoot>
                 <tr>
-                    <th colspan="5" class="border border-1 border-dark">Total</th>
-                    <td class="border border-1 border-dark"><?= "Rp. " . number_format($totalAkhir, 0, ',', '.') . ",00"; ?></td>
+                    <td class="border border-1 border-dark"></td>
+                    <td class="border border-1 border-dark"></td>
+                    <td class="border border-1 border-dark"></td>
+                    <td class="border border-1 border-dark"></td>
                 </tr>
             </tfoot>
 
         </table>
+
+        <p>Demikian untuk menjadikan periksa dan atas perhatiannya kami ucapkan terima ksih.</p>
+        <div class="container ">
+            <div class="row row-cols-10 justify-content-md-center">
+                <div class="col-5">Mengetahui,</div>
+                <div class="col-5">Sungai Raya, 20 Maret 2023</div>
+            </div>
+            <div class="row row-cols-10 justify-content-md-center mb-1">
+                <div class="col-5">Manajer Eksekutif</div>
+                <div class="col-5">Kepala Sekolah</div>
+            </div>
+            <div class="row row-cols-10 justify-content-md-center mt-5">
+                <div class="col-5">Jimmy The</div>
+                <div class="col-5">Anton Wijaya, SH.</div>
+            </div>
+        </div>
     </div>
     <div class="kaki">
         <?php include '../cetak/footer.php';
@@ -53,4 +84,4 @@
         ?>
     </div>
 </div>
-<?php include '../footutama.php'; ?>
+<?php include '../footutama.php';
