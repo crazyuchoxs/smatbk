@@ -37,7 +37,7 @@ if ($result2->num_rows > 0) :
 		$nisn = $row['NISN'];
 		$nis = $row['NIPD'];
 		$kelas = $row['Rombel Saat Ini'];
-		$ttl = $row['Tempat Lahir'] . ", " . dateIN(date("m d Y", strtotime($row['Tanggal Lahir'])));
+		$ttl = $row['Tempat Lahir'] . ", " . dateIN(date("d m Y", strtotime($row['Tanggal Lahir'])));
 		if ($row['JK'] == "L") {
 			$jk = "Laki - Laki";
 		} else {
@@ -77,8 +77,12 @@ if ($result2->num_rows > 0) :
 			</div>
 
 			<div class="input-group mb-3">
+			<span class="input-group-text text-danger border-danger" id="basic-addon1">No Surat</span>
+				<input type="text" name="nosurat" class="form-control text-danger border-danger" Placeholder="No Surat" aria-describedby="basic-addon1" enabled>
+			</div>
+			<div class="input-group mb-3">
 				<span class="input-group-text text-danger border-danger" id="basic-addon1">Keterangan</span>
-				<input type="text" name="keterangan" class="form-control text-danger border-danger" Placeholder="Isi Keterangan..." aria-describedby="basic-addon1" enabled>
+				<textarea type="text" name="keterangan" class="form-control text-danger border-danger" Placeholder="Isi Keterangan..." aria-describedby="basic-addon1" enabled></textarea>
 			</div>
 
 

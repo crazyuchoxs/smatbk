@@ -7,7 +7,7 @@
                 <i class="fa-solid fa-user-gear text-warning-emphasis fs-1"></i>
             </div>
         </div>
-        <div class="col bg-white  p-4" style="min-height:550px;">
+        <div class="col bg-white p-4" style="min-height:550px;max-height:550px;overflow-x:scroll;">
             <?php include 'cariSiswa.php' ?>
         </div>
     </div>
