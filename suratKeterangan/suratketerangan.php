@@ -1,7 +1,7 @@
     <div class="container-fluid suratketerangan">
         <div class="judul">
             <h2>SURAT KETERANGAN</h2>
-            <p>No : <?= $_POST['nosurat']?>/I14.2.14/SMA-TBK/TU/<?php echo date("Y") ?></p>
+            <p>No : <?= $_POST['nosurat'] ?>/I14.2.14/SMA-TBK/TU/<?php echo date("Y") ?></p>
         </div>
         <p>Yang bertanda tangan di bawah ini Kepala SMA Taruna Bumi Khatulistiwa kabupaten Kubu Raya, dengan ini menerangkan bahwa :</p>
         <p>

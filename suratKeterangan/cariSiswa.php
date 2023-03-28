@@ -77,7 +77,7 @@ if ($result2->num_rows > 0) :
 			</div>
 
 			<div class="input-group mb-3">
-			<span class="input-group-text text-danger border-danger" id="basic-addon1">No Surat</span>
+				<span class="input-group-text text-danger border-danger" id="basic-addon1">No Surat</span>
 				<input type="text" name="nosurat" class="form-control text-danger border-danger" Placeholder="No Surat" aria-describedby="basic-addon1" enabled>
 			</div>
 			<div class="input-group mb-3">
