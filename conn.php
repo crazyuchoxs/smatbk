@@ -15,4 +15,3 @@ if (!$conn) {
 // SQL query to retrieve data from database
 $sql = "SELECT * FROM tblSiswa";
 $sqlWali = "SELECT * FROM tblwalikelas";
-

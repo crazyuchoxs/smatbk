@@ -6,7 +6,6 @@ error_reporting(0);
 // Execute the query and store the result
 $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) : ?>
-
 	<form method='POST'>
 		<div class="input-group mb-3">
 			<input name="nama" type="text" class="form-control" list="datalistOptions" placeholder="Nama Siswa" aria-label="Nama Siswa" aria-describedby="button-addon2">
@@ -25,7 +24,6 @@ if (mysqli_num_rows($result) > 0) : ?>
 	<?php endif;
 
 $nama1 = $_POST['nama'];
-
 $sql2 = "SELECT * FROM tblSiswa WHERE Nama ='" . $nama1 . "'";
 $result2 = $conn->query($sql2);
 
@@ -33,11 +31,11 @@ if ($result2->num_rows > 0) :
 	// output data of each row
 	while ($row = $result2->fetch_assoc()) :
 
-		$nm = $row['Nama'];
+		$nm = ucwords(strtolower($row['Nama']));
 		$nisn = $row['NISN'];
 		$nis = $row['NIPD'];
 		$kelas = $row['Rombel Saat Ini'];
-		$ttl = $row['Tempat Lahir'] . ", " . dateIN(date("d m Y", strtotime($row['Tanggal Lahir'])));
+		$ttl = ucwords(strtolower($row['Tempat Lahir'])) . ", " . dateIN(date("d m Y", strtotime($row['Tanggal Lahir'])));
 		if ($row['JK'] == "L") {
 			$jk = "Laki - Laki";
 		} else {

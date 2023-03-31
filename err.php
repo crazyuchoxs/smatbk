@@ -1,5 +1,5 @@
 <?php
 if (empty($_POST)) {
-    header("Location: ../");
-    exit;
-  }
+  header("Location: ../");
+  exit;
+}

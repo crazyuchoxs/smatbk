@@ -41,7 +41,6 @@
             <div class="col-4">Nama Orang Tua</div>
             <div class="col-7">: <?= $_POST['nOT']; ?></div>
         </div>
-
         </p>
         <p>Ketarangan :</p>
         <?php
@@ -63,7 +62,6 @@
                 <?php
                 include '../conn.php';
                 include '../conKasek.php';
-
                 ?>
                 <br><br>
                 Sungai Raya, <?= dateIN(date("d m Y")) ?><br>
@@ -82,5 +80,4 @@
                 </ul>
             </div>
         </div>
-
     </div>

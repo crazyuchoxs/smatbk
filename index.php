@@ -39,8 +39,6 @@ include 'headutama.php';
                     </form>
                 </div>
             </div>
-
-
         </div>
         <div class="col-3">&nbsp;</div>
     </div>
