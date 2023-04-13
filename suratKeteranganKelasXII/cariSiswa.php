@@ -79,13 +79,10 @@ if ($result2->num_rows > 0) :
 				<input type="text" name="nosurat" class="form-control text-danger border-danger" Placeholder="No Surat" aria-describedby="basic-addon1" enabled>
 			</div>
 			<div class="input-group mb-3">
-				<span class="input-group-text text-danger border-danger" id="basic-addon1">Keterangan</span>
-				<input type="text" name="keterangan" class="form-control text-danger border-danger" Placeholder="Isi Keterangan..." aria-describedby="basic-addon1" enabled></input>
+				<span class="input-group-text text-danger border-danger" id="basic-addon1">Tujuan</span>
+				<input type="text" name="Tujuan" class="form-control text-danger border-danger" Placeholder="Tujuan Surat" aria-describedby="basic-addon1" enabled></input>
 			</div>
-			<div class="input-group mb-3">
-				<span class="input-group-text text-danger border-danger" id="basic-addon1">Keterangan +</span>
-				<input type="text" name="keterangan2" class="form-control text-danger border-danger" Placeholder="Isi Keterangan..." aria-describedby="basic-addon1" enabled></input>
-			</div>
+
 
 
 			<button class="btn btn-primary m-3" type="submit">Buat Surat</button>

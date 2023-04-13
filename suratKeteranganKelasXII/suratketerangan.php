@@ -47,8 +47,9 @@
         <p>
         <ol>
             <li>Nama tersebut diatas adalah benar siswa SMA Taruna Bumi Khatulistiwa Angkatan <?= $angkatan ?> Tahun Pelajaran <?= $tahun ?>.</li>
-            <li><?= $_POST['keterangan']; ?></li>
-            <li><?= $_POST['keterangan2']; ?></li>
+            <li>Yang bersangkutan tercatat dalam Kegiatan Belajar Mengajar Tahun Pelajaran 2022/2023 dan masih duduk di kelas XII</li>
+            <li>Yang bersangkutan telah mengikuti semua penilaian yang dilakukan sekolah sebagai syarat pertimbangan kelulusan</li>
+            <li>Surat keterangan ini diberikan untuk melengkapi persyaratan <?= $_POST['Tujuan'] ?></li>
         </ol>
         </p>
         <p>Demikian Surat Keterangan ini dibuat, agar menjadikan periksa bagi yang berkepentingan.</p>

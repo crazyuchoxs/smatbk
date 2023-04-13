@@ -5,9 +5,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $link = 'suratKeterangan/';
     } else if ($jenisS == 'Surat Pindah') {
         $link = 'suratPindah/';
+    } else if ($jenisS == 'Surat Keterangan Kelas XII') {
+        $link = 'suratKeteranganKelasXII/';
     } else {
         $link = $_SERVER['PHP_SELF'];
     }
+
     header('Location: ' . $link);
     exit;
 }
@@ -31,6 +34,7 @@ include 'headutama.php';
                             <label class="input-group-text" for="JenisSurat">Surat</label>
                             <select class="form-select" id="jenisSurat" name="jenisSurat">
                                 <option value=""> --> Pilih Surat <-- </option>
+                                <option value="Surat Keterangan Kelas XII">KetKelasXII</option>
                                 <option value="Surat Keterangan">Keterangan</option>
                                 <option value="Surat Pindah">Pindah</option>
                             </select>
